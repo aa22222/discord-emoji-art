@@ -1,0 +1,45 @@
+<html>
+<style>
+    body {
+        margin: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f0f0f0;
+    }
+    #mycanvas {
+        margin-top: 8px;
+        border: 1px #000 solid;
+        background-color: #fff;
+    }
+</style>
+<body>
+    <script>
+        let DIMENSION = 14;
+        let selectedColor = '#000000';
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <body>
+        <table>
+            <tr>
+                <Td>
+                    <button style="background-color: black;width: 50px;height: 50px;" onclick="selectedColor='#000000'"></button>
+                </td>
+                <td>
+                    <button style="background-color: white;width: 50px;height: 50px;" onclick="selectedColor='#ffffff'"></button>
+                </td>
+            </tr>
+        </table>
+        <div>
+            <canvas id=mycanvas width=500 height=500></canvas>
+        </div>
+        <label for="black">Black</label>
+        <input type="text" id="black">
+        <label for="white">White</label>
+        <input type="text" id="white">
+        <button onclick="render_canvas()">Render</button>
+        <br><br>
+        <textarea id="output" name="output">Render Output</textarea>
+        <script src="draw.js"></script>
+    </body>
+
+</html>
