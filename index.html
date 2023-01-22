@@ -13,7 +13,12 @@
 </style>
 <body>
     <script>
-        let DIMENSION = 14;
+    	let t = prompt("Please enter the size of the grid (default: 14).", "");
+    	t = parseInt(t, 10);
+
+        let DIMENSION;
+        if(isNaN(t)) DIMENSION = 14;
+        else DIMENSION = t;
         let selectedColor = '#000000';
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
